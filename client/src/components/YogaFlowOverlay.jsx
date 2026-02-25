@@ -60,7 +60,7 @@ function makePlan(routine) {
     sections,
     targetArea: routine.focus,
     poses,
-    audioSrc: "/audio/audio2.mp3"
+    audioSrc: `${import.meta.env.BASE_URL || "/"}audio/audio2.mp3`
   };
 }
 

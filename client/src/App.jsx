@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Navigate, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import SignIn from "./pages/SignIn.jsx";
 import GetStarted from "./pages/GetStarted.jsx";
@@ -28,8 +28,10 @@ function GuestOnlyRoute({ children }) {
 }
 
 export default function App() {
+  const Router = import.meta.env.PROD ? HashRouter : BrowserRouter;
+
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/meditation" element={<Meditation />} />
@@ -61,6 +63,6 @@ export default function App() {
           )}
         />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }

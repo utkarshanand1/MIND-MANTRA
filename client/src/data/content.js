@@ -3,6 +3,8 @@ import iconYoga from "../assets/icon-yoga.svg";
 import iconStress from "../assets/icon-stress.svg";
 import utkarshPhoto from "../assets/photos/IMG_1561.jpg";
 
+const basePath = import.meta.env.BASE_URL || "/";
+
 export const features = [
   {
     title: "Guided Meditation",
@@ -34,7 +36,7 @@ export const sessions = [
     duration: 2.5,
     level: "Beginner",
     mood: "Focus",
-    audioSrc: "/audio/audio1.mp3",
+    audioSrc: `${basePath}audio/audio1.mp3`,
     image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80"
   },
   {
@@ -43,7 +45,7 @@ export const sessions = [
     duration: 7,
     level: "All levels",
     mood: "Unwind",
-    audioSrc: "/audio/audio2.mp3",
+    audioSrc: `${basePath}audio/audio2.mp3`,
     image: "https://images.unsplash.com/photo-1593810450967-f9c42742e326?auto=format&fit=crop&w=1200&q=80"
   },
   {
@@ -52,7 +54,7 @@ export const sessions = [
     duration: 10,
     level: "Beginner",
     mood: "Relief",
-    audioSrc: "/audio/audio3.mp3",
+    audioSrc: `${basePath}audio/audio3.mp3`,
     image: "https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=1200&q=80"
   }
 ];
@@ -137,7 +139,7 @@ export const resources = [
     type: "Guide",
     fileLabel: "PDF • 6 pages",
     estimate: "10 min read",
-    downloadUrl: "/downloads/coping-with-overload.txt",
+    downloadUrl: `${basePath}downloads/coping-with-overload.txt`,
     mostDownloaded: true,
     examStressRecommended: true,
     moods: ["overwhelmed", "anxious"]
@@ -149,7 +151,7 @@ export const resources = [
     type: "Journal",
     fileLabel: "Digital journal template",
     estimate: "5 min reflection",
-    downloadUrl: "/downloads/body-scan-journal.txt",
+    downloadUrl: `${basePath}downloads/body-scan-journal.txt`,
     mostDownloaded: false,
     examStressRecommended: true,
     moods: ["stressed", "foggy"]
@@ -161,7 +163,7 @@ export const resources = [
     type: "Routine",
     fileLabel: "Printable worksheet",
     estimate: "7 min setup",
-    downloadUrl: "/downloads/gentle-morning-ritual.txt",
+    downloadUrl: `${basePath}downloads/gentle-morning-ritual.txt`,
     mostDownloaded: true,
     examStressRecommended: false,
     moods: ["low-energy", "distracted"]
@@ -173,7 +175,7 @@ export const resources = [
     type: "Guide",
     fileLabel: "One-page printable",
     estimate: "3 min reset",
-    downloadUrl: "/downloads/emergency-calm-sheet.txt",
+    downloadUrl: `${basePath}downloads/emergency-calm-sheet.txt`,
     mostDownloaded: true,
     examStressRecommended: true,
     moods: ["panic", "exam-stress"]
