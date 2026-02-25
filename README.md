@@ -31,4 +31,4 @@ A mental wellness web app with guided meditation, yoga routines, and stress-mana
   - `POST /api/auth/login`
   - `POST /api/auth/firebase`
   - `GET /api/auth/me` (Bearer token required)
-## LINK - https://github.com/utkarshanand1/MIND-MANTRA
+## LINK - https://utkarshanand1.github.io/MIND-MANTRA/
