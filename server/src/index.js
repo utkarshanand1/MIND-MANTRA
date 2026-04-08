@@ -11,8 +11,28 @@ initFirebaseAdmin();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const defaultAllowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "http://localhost:5175",
+  "http://localhost:5176",
+  "http://localhost:5177",
+  "https://utkarshanand1.github.io"
+];
+const allowedOrigins = process.env.CLIENT_ORIGIN
+  ? process.env.CLIENT_ORIGIN.split(",").map((origin) => origin.trim())
+  : defaultAllowedOrigins;
 
-app.use(cors());
+app.use(
+  cors({
+    origin(origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      return callback(new Error(`CORS blocked for origin: ${origin}`));
+    }
+  })
+);
 app.use(express.json());
 
 app.get("/", (req, res) => {

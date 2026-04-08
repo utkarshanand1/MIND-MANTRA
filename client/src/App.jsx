@@ -28,7 +28,8 @@ function GuestOnlyRoute({ children }) {
 }
 
 export default function App() {
-  const Router = import.meta.env.PROD ? HashRouter : BrowserRouter;
+  const useHashRouter = import.meta.env.VITE_USE_HASH_ROUTER === "true";
+  const Router = useHashRouter ? HashRouter : BrowserRouter;
 
   return (
     <Router>

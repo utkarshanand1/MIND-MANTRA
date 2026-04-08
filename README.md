@@ -16,6 +16,13 @@ A mental wellness web app with guided meditation, yoga routines, and stress-mana
 3. Run dev servers
    - `npm run dev`
 
+## Production setup
+1. Deploy backend from `server/` to Render.
+2. Use a public MongoDB URI for production. Local MongoDB will not work for other devices.
+3. Copy `client/.env.production.example` to `client/.env.production` and set `VITE_API_BASE_URL` to your deployed backend URL.
+4. Set `CLIENT_ORIGIN=https://utkarshanand1.github.io` in the backend environment.
+5. Redeploy GitHub Pages with `npm run deploy`.
+
 ## Scripts
 - `npm run dev` - runs client and server together
 - `npm run dev:client` - runs client only

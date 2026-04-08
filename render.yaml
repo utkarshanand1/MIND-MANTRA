@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: mind-mantra-api
+    runtime: node
+    rootDir: server
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: CLIENT_ORIGIN
+        value: https://utkarshanand1.github.io
+      - key: FIREBASE_PROJECT_ID
+        value: mindmantra-63d71
+      - key: FIREBASE_CLIENT_EMAIL
+        value: firebase-adminsdk-fbsvc@mindmantra-63d71.iam.gserviceaccount.com
+      - key: FIREBASE_PRIVATE_KEY
+        sync: false

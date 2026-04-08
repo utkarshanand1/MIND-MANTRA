@@ -8,12 +8,14 @@ import {
 } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyDYEsEJQbpVk68BIaEsZBAvfPiz-0qb3nY",
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "mindmantra-63d71.firebaseapp.com",
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "mindmantra-63d71",
+  storageBucket:
+    import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "mindmantra-63d71.firebasestorage.app",
+  messagingSenderId:
+    import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "194596885509",
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:194596885509:web:306ef5e5098d826bf4f86c"
 };
 
 const hasFirebaseConfig =
